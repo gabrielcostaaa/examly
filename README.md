@@ -1,4 +1,4 @@
-# Examly 📖
+# Examly 📕
 
 Plataforma inteligente para otimizar seus estudos, combinando planejamento personalizado, registro de progresso e gestão de turmas para estudantes e educadores.
 
