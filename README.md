@@ -55,17 +55,17 @@ O objetivo do Examly é aprimorar a eficácia do aprendizado e a organização, 
 
 ## Tecnologias Utilizadas
 
+  * **Linguagem**:
+      * **Typescript**: Superconjunto do JavaScript que adiciona tipagem estática para maior segurança e manutenibilidade do código.
   * **Frontend**:
       * **React**: Biblioteca JavaScript para construção de interfaces de usuário dinâmicas e reativas.
-      * **TypeScript**: Superconjunto do JavaScript que adiciona tipagem estática para maior segurança e manutenibilidade do código.
       * **React Router DOM**: Gerenciamento de rotas e navegação na aplicação web.
       * **React Hook Form**: Solução performática e flexível para gerenciamento de formulários.
       * **CSS**: Estilização da interface.
       * **Yarn**: Gerenciador de pacotes rápido e confiável.
       * **Vite**: Ferramenta de build frontend que oferece um ambiente de desenvolvimento ágil.
   * **Backend**:
-      * **NestJS**: Framework Node.js progressivo para construir aplicações eficientes, escaláveis e de nível empresarial.
-      * **TypeScript**: Utilizado também no backend para garantir a consistência e a robustez do código.
+      * **Fastify**: Framework Node.js altamente performático e focado em proporcionar uma ótima experiência para desenvolvedores.
   * **Banco de Dados**:
       * **PostgreSQL**: Sistema de gerenciamento de banco de dados relacional robusto e de código aberto, utilizado para armazenar todas as informações do sistema.
 
