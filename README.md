@@ -1,10 +1,9 @@
 # Examly 📖
 
 
-
 Plataforma de questões para estudo ativo através de questões
 
-
+![Logo do Examly](images/examly_banner_git.png)
 
 ## Autor
 
