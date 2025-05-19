@@ -4,6 +4,8 @@ Plataforma inteligente para otimizar seus estudos, combinando planejamento perso
 
 ![Logo do Examly](images/examly_banner_git.png)
 
+Desenvolvido para atender ao trabalho integrador de Programação II e Banco de Dados I
+
 -----
 
 ## Autor
