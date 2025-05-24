@@ -68,6 +68,8 @@ O objetivo do Examly é aprimorar a eficácia do aprendizado e a organização, 
       * **Fastify**: Framework Node.js altamente performático e focado em proporcionar uma ótima experiência para desenvolvedores.
   * **Banco de Dados**:
       * **PostgreSQL**: Sistema de gerenciamento de banco de dados relacional robusto e de código aberto, utilizado para armazenar todas as informações do sistema.
+  * **Ambiente HTTP**:
+     * **Postman**: Testar requisições http
 
 -----
 
