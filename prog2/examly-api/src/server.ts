@@ -5,6 +5,8 @@ import fastifyPostgres from '@fastify/postgres';
 import { DatabaseService } from './services/database';
 import { UserModel } from './models/user';
 import { authRoutes } from './routes/auth';
+import { userRoutes } from './routes/user';
+import { configureJWT } from './utils/jwt';
 
 // Carregar variáveis de ambiente do arquivo .env
 dotenv.config();
@@ -40,6 +42,11 @@ const initializeServices = async () => {
   // Cria os modelos com as dependências injetadas
   const userModel = new UserModel(server.log, databaseService);
 
+  server.register(userRoutes, {
+    prefix: '/api/users',
+    userModel, // Injetando o modelo
+  });
+
   // Registra as rotas com as dependências necessárias
   server.register(authRoutes, { 
     prefix: '/api/auth',
@@ -59,19 +66,25 @@ server.get('/', async () => {
 
 const start = async () => {
   try {
-    // Inicializa os serviços
+    // 1. Garanta que a autenticação JWT seja configurada PRIMEIRO
+    await configureJWT(server);
+
+    // 2. Agora pode inicializar os serviços com segurança
     await initializeServices();
 
     // Inicia o servidor
     const port = parseInt(process.env.PORT || '3000', 10);
-    await server.listen({ 
-      port: port, 
+    await server.listen({
+      port: port,
       host: '0.0.0.0',
       listenTextResolver: (address) => {
         return `Servidor Examly rodando em ${address}`;
-      }
+      },
     });
   } catch (err) {
+    // Mantenha o console.error para ver erros detalhados, se necessário
+    console.error('--- DETALHES COMPLETOS DO ERRO ---'); 
+    console.error(err);
     server.log.error('Erro ao iniciar servidor:', err);
     process.exit(1);
   }
