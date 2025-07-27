@@ -1,0 +1,11 @@
+# Este é o arquivo de configuração principal
+root = true
+
+[*]
+charset = utf-8
+indent_style = space
+indent_size = 2
+# A linha mais importante para o seu problema 👇
+end_of_line = lf
+insert_final_newline = true
+trim_trailing_whitespace = true
