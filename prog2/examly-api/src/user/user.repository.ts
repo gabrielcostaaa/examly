@@ -65,6 +65,15 @@ export class UserRepository {
     return result.rows[0];
   }
 
+  async deleteUser(id: string): Promise<void> {
+    const query = 'DELETE FROM "user" WHERE usr_id = $1';
+    const result = await this.pg.query(query, [id]);
+
+    if (result.rowCount === 0) {
+      throw new NotFoundException('Usuário não encontrado');
+    }
+  }
+
   async emailExist(email: string): Promise<boolean> {
     const query = 'SELECT usr_email FROM "user" WHERE usr_email = $1';
 
